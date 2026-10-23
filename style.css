@@ -19,6 +19,7 @@
 .notes-date { margin:14px 0 0; font-family:"Courier New",monospace; font-size:10px; line-height:1.7; color:var(--muted); }
 .notes-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
 .notes-grid article { border-top:1px solid var(--ink); padding-top:23px; min-width:0; }
+.notes-grid .principle-no { position:static; display:block; }
 .notes-grid h2 { font-size:23px; font-weight:700; line-height:1.45; letter-spacing:-.7px; margin:19px 0 15px; overflow-wrap:anywhere; }
 .notes-grid p,.notes-questions p { font-size:13px; line-height:1.95; color:var(--muted); margin:0; }
 .notes-questions { margin-top:38px; border-top:1px solid var(--line); }
