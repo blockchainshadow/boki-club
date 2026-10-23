@@ -1,0 +1,10 @@
+{
+  "account": "https://x.com/AlanShao111",
+  "discoveredVia": "https://syndication.twitter.com/srv/timeline-profile/screen-name/AlanShao111",
+  "note": "Public posts from the specified account. Source attribution is not an endorsement or a license grant.",
+  "photos": [
+    {"file": "alan-gym.webp", "post": "https://x.com/AlanShao111/status/1988466625318629629", "original": "https://pbs.twimg.com/media/G5hz22SWoAAAUY5.jpg"},
+    {"file": "alan-morning.webp", "post": "https://x.com/AlanShao111/status/1983980747221619003", "original": "https://pbs.twimg.com/media/G4iD-Yca8AEgVUu.jpg"},
+    {"file": "alan-training.webp", "post": "https://x.com/AlanShao111/status/1968065946742116482", "original": "https://pbs.twimg.com/media/G0_5iera4AAIJGe.jpg"}
+  ]
+}
