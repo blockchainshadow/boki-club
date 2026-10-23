@@ -4,11 +4,11 @@
 
 ## 在线地址
 
-- 网站：https://blockchainshadow.github.io/boki-club/
+- 网站：http://boki.club/ （HTTPS 证书正在等待 GitHub 签发，当前不要忽略 HTTPS 安全警告。）
 - 源码：https://github.com/blockchainshadow/boki-club
-- 已启用 main 分支根目录发布与 HTTPS，提交后 GitHub Pages 自动重新部署。
+- 已启用 main 分支根目录发布，提交后 GitHub Pages 自动重新部署。
 - 发布新样式或脚本时同步更新 index.html 中 CSS/JS URL 的 `v=` 版本号，防止回访浏览器把旧静态资源与新页面混用。
-- boki.club 的 Porkbun DNS 尚待在用户已登录的 Chrome 中配置；为保证上面的公开地址可用，当前在线仓库暂不添加 CNAME。待 DNS 和域名设置就绪后再启用自定义域名。
+- 已在 Porkbun 将根域 ALIAS 与 www 的 CNAME 指向 blockchainshadow.github.io，移除了默认通配符停放记录；公共 DNS 已返回 GitHub Pages 地址。GitHub 自定义域名已设为 boki.club；DNS 检查及免费证书签发仍由 GitHub 异步处理，完成后在 Settings → Pages 开启 Enforce HTTPS。
 
 
 ## 已包含
@@ -18,7 +18,7 @@
 - 优先使用已保存的语言，其次匹配浏览器语言；也可手动切换。导航、正文、投票状态、错误提示、图片替代文字均随语言切换。装饰性的英文品牌标语保留英文。
 - 首页为 @AlanShao111 的三张公开健身照片轮播：每 5 秒自动切换，可暂停、点击圆点、左右切换、键盘方向键或手机滑动。鼠标悬停、键盘焦点进入、页面隐藏或轮播离开可见区域时暂停；手动选图后停止自动切换，需主动开启；系统“减少动态效果”开启时默认不自动播放。控制说明和图片替代文字支持十种语言。每张照片有对应原帖链接，来源见 assets/gallery-sources.json；公开照片不等于取得商业授权，页面注明不代表合作或代言。用户原截图保留查看入口和社交分享用裁剪图。
 - “支持 boki.club +1”：调用真实在线计数服务，所有访客共享同一个总数，不是浏览器本地模拟。
-- 本地发布包保留值为 boki.club 的 CNAME 文件；未连接 DNS 时不要把它加入线上仓库，以免 GitHub 默认网址提前跳转到尚未配置的域名。
+- CNAME 文件已配置 boki.club 并纳入仓库，后续更新网站时保留此文件。
 
 ## 先看本地效果
 
