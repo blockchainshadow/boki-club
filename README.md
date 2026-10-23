@@ -4,11 +4,11 @@
 
 ## 在线地址
 
-- 网站：http://boki.club/ （HTTPS 证书正在等待 GitHub 签发，当前不要忽略 HTTPS 安全警告。）
+- 网站：https://boki.club/
 - 源码：https://github.com/blockchainshadow/boki-club
 - 已启用 main 分支根目录发布，提交后 GitHub Pages 自动重新部署。
 - 发布新样式或脚本时同步更新 index.html 中 CSS/JS URL 的 `v=` 版本号，防止回访浏览器把旧静态资源与新页面混用。
-- 已在 Porkbun 将根域 ALIAS 与 www 的 CNAME 指向 blockchainshadow.github.io，移除了默认通配符停放记录；公共 DNS 已返回 GitHub Pages 地址。GitHub 自定义域名已设为 boki.club；DNS 检查及免费证书签发仍由 GitHub 异步处理，完成后在 Settings → Pages 开启 Enforce HTTPS。
+- 已在 Porkbun 将根域 ALIAS 与 www 的 CNAME 指向 blockchainshadow.github.io，移除了默认通配符停放记录；公共 DNS 已返回 GitHub Pages 地址。GitHub 自定义域名已设为 boki.club，免费证书已签发，已开启 Enforce HTTPS；https://boki.club 已验证返回 HTTP 200。
 
 
 ## 已包含
