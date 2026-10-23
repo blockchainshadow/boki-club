@@ -125,11 +125,41 @@ dig www.boki.club CNAME +short
 - 若增票请求结果未知（例如断网或超时），因为服务不支持幂等提交，本页保留“待确认”状态并禁止自动重发，避免一次点击被重算；刷新总数不能确认某一票究竟是否提交。
 - 首次本地文件交付前进行了两次真实测试增票并清回 0；公开网站上线后不再重置计数，以保留真实访客支持。
 
+## 五、薄肌内容与 SEO 来源核对
+
+SEO/GEO 正文放在独立的 https://boki.club/guide/ 薄肌笔记页，主页保留原来的简洁简介、照片轮播和支持按钮，只在页脚增加轻量入口。内容页提供原始内容索引和问答，覆盖“薄肌”“薄肌理论”“薄肌理伦”“邵艾伦 Alan”“力量训练”“饮食管理”“肌肉线条”和“自律生活方式”。“薄肌理伦”仅作为用户的搜索写法收录，不称为作者自称或已证实的常见说法。内容为独立摘要，不整篇搬运，也不作为医学诊断、统一体脂指标或效果保证。
+
+### 原始来源与跨平台身份
+
+| 平台 | 已确认的本人公开入口 | 核对依据 |
+| --- | --- | --- |
+| X | https://x.com/AlanShao111 | [《薄肌指南》](https://x.com/AlanShao111/status/2100011450840526918)、[薄肌理论原帖](https://x.com/AlanShao111/status/2093592063568966076) |
+| YouTube | https://www.youtube.com/@alanshao1 | 两支原视频的 YouTube oEmbed 返回作者“邵艾伦Alan”和该 author_url：[为什么练薄肌](https://www.youtube.com/watch?v=R4tI8LDeMPs)、[训练、饮食、减脂](https://www.youtube.com/watch?v=vQp8G-BHnI8) |
+| Bilibili | https://space.bilibili.com/4029133/ | [本人投稿页](https://www.bilibili.com/video/BV1xa4k6vEpp/) 标明作者、用户主页，并在简介交叉指向 Instagram alanshao1 与 YouTube 邵艾伦Alan |
+| Instagram | https://www.instagram.com/alanshao1/ | 上述 B 站本人简介明确写明 ins：alanshao1；个人公开简介与名字一致 |
+| Threads | https://www.threads.com/@alanshao1 | 同名 Meta 账号与公开帖子交叉指向 [X 本人内容](https://www.threads.com/@alanshao1/post/Dd5NjLvDXQJ/) |
+| 抖音 | 本次不放主页链接 | 已调查公开索引，但第一方主页直接读取为空，不能复核号名与 sec_uid 的绑定 |
+| 小红书 | 本次不放主页链接 | 未找到足以确认本人唯一主页的第一方外链，不猜测链接，不用搬运号替代 |
+
+研究范围是能核实的公开资料和代表作品，不是“所有平台全部帖子”的全量抓取；未启用用户 Chrome 插件或访问私密/付费社群。
+
+### 搜索配置
+
+- 内容页采用中文标题、description、可见 H1/H2、canonical、Open Graph、Twitter Card；WebSite/WebPage JSON-LD 与页面语言、标题、简介同步。原始来源、简短答案、明确的非官方身份与资料核对日期便于读者和 AI 搜索引用。
+- 内容页无已保存偏好时默认中文，避免浏览器语言改变其默认索引文本；十种语言均可切换并保存选择。主页仍保持原来的语言选择行为。现有切换仍是同一个 URL，不伪造 hreflang 或独立语言页。
+- robots.txt 只描述公开主站，sitemap.xml 列真实首页及 /guide/。llms.txt 提供公开页面的轻量 AI 阅读索引，不是标准化排名开关，不保证被 AI 引用。私有统计后台仍独立鉴权、noindex，不加入地图或 AI 索引；robots 不是权限控制。
+- 未添加无效的 keywords meta 标签或隐藏关键词。[Google 官方说明](https://developers.google.com/search/blog/2009/09/google-does-not-use-keywords-meta-tag)明确不使用该标签作为排名因素。
+- FAQ 是可读正文，不承诺 FAQ 富结果、收录时点或排名；未伪造官方身份、作者背书、评分或医学权威。
+- 修改正文后更新 sitemap.xml 的真实 lastmod；部署后可在自己已验证的 Search Console / Bing Webmaster Tools 提交 https://boki.club/sitemap.xml ，本次未操作站长平台账号。
+
 ## 文件说明
 
 | 文件 | 用途 |
 | --- | --- |
 | index.html | 页面结构 |
+| guide/index.html | 独立的薄肌 SEO/GEO 内容与来源页，中文正文无需 JavaScript 即可读取 |
+| guide.js | 内容页十语言与元信息同步，不加载主页的投票/轮播脚本 |
+| robots.txt / sitemap.xml / llms.txt | 搜索抓取声明、真实页面地图和公开 AI 阅读索引 |
 | style.css | 视觉和响应式样式 |
 | locales.js | 十语言文案；每行顺序见文件顶部 |
 | script.js | 语言选择、在线计数、浏览器已支持标记 |
@@ -138,7 +168,7 @@ dig www.boki.club CNAME +short
 | .gitignore | 防止独立后台源码、运行状态与本地凭据进入公开站点仓库 |
 | assets/alan-*.webp | 从指定博主公开帖选取并压缩的三张健身照片 |
 | assets/gallery-sources.json | 每张照片的原始图片地址、博主账号和原帖链接 |
-| assets/portrait.webp | 用户原截图的裁剪版，用于社交分享预览 |
+| assets/portrait.webp | 用户原截图的裁剪素材保留；分享预览使用轮播中的健身照片 |
 | assets/IMG_3713.PNG | 用户提供的原图 |
 | assets/favicon.svg | 站点图标 |
 | CNAME | GitHub Pages 自定义域名 |

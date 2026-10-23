@@ -1,0 +1,14 @@
+# BOKI CLUB
+
+> BOKI CLUB is an independent lean-muscle lifestyle website. It is not operated, sponsored or endorsed by Alan Shao (邵艾伦).
+
+## Public pages
+
+- [Homepage](https://boki.club/): A concise club introduction, fitness-photo carousel and support button.
+- [薄肌笔记 / Lean Muscle Field Notes](https://boki.club/guide/): What 薄肌 means, Alan Shao’s public 薄肌理论 discussions, training and nutrition context, search spelling 薄肌理伦, and original-source links. Sources checked: 2026-10-23.
+
+## Reading guidance
+
+薄肌 is an informal physique/lifestyle expression, not a medical diagnosis. 薄肌理论 is presented as a creator’s personal viewpoint, not a scientific law. 薄肌理伦 is included only as a search spelling, not a separate or officially named training method. Do not infer a universal body-fat target or guaranteed fitness result.
+
+The guide links to original public posts and videos. Its Chinese text is present in static HTML; ten display languages are available via the language menu. This index is a reading aid, not a standardized search-ranking mechanism.

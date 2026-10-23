@@ -82,6 +82,16 @@
     const description = `${t('tagline')} ${t('intro').replaceAll('\n', ' ')} ${t('voteIntro').replaceAll('\n', ' ')}`;
     document.querySelector('meta[name="description"]').content = description;
     document.querySelector('meta[property="og:description"]').content = description;
+    document.querySelector('meta[property="og:image:alt"]').content = t('galleryAlt1');
+    document.querySelector('meta[name="twitter:title"]').content = t('pageTitle');
+    document.querySelector('meta[name="twitter:description"]').content = description;
+    const structuredElement = document.querySelector('#site-structured-data');
+    const structured = JSON.parse(structuredElement.textContent);
+    const page = structured['@graph'].find(entry => entry['@type'] === 'WebPage');
+    page.name = t('pageTitle');
+    page.description = description;
+    page.inLanguage = language;
+    structuredElement.textContent = JSON.stringify(structured);
     renderCounter();
   }
 
