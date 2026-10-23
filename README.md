@@ -7,6 +7,7 @@
 - 网站：https://blockchainshadow.github.io/boki-club/
 - 源码：https://github.com/blockchainshadow/boki-club
 - 已启用 main 分支根目录发布与 HTTPS，提交后 GitHub Pages 自动重新部署。
+- 发布新样式或脚本时同步更新 index.html 中 CSS/JS URL 的 `v=` 版本号，防止回访浏览器把旧静态资源与新页面混用。
 - boki.club 的 Porkbun DNS 尚待在用户已登录的 Chrome 中配置；为保证上面的公开地址可用，当前在线仓库暂不添加 CNAME。待 DNS 和域名设置就绪后再启用自定义域名。
 
 
